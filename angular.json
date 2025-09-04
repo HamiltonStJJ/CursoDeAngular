@@ -22,6 +22,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assents",
+                "output": "assents"
               }
             ],
             "styles": [
@@ -79,6 +84,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assents",
+                "output": "assents"
               }
             ],
             "styles": [
@@ -88,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c0b9fd3e-db9c-453b-9e0d-829c149c8734"
   }
 }

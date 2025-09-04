@@ -1,0 +1,23 @@
+<mat-nav-list class="container">
+    <div class="logo">
+      <mat-icon class="icon" svgIcon="logo_menu"></mat-icon>
+    </div>
+    <div>
+      <mat-list-item *ngFor="let option of menuOptions">
+        <button mat-icon-button [routerLink]="option.route">
+          <mat-icon [svgIcon]="option.icon"></mat-icon>
+          <span>{{ option.label }}</span>
+        </button>
+      </mat-list-item>
+    </div>
+    
+    <div class="user-section">
+      <div class="user-info">
+        <mat-icon class="user-icon" svgIcon="user"></mat-icon>
+        <span class="admin-text">Admin</span>
+      </div>
+      <button mat-button class="logout-button">
+        <span>Cerrar sesión</span>
+      </button>
+    </div>
+  </mat-nav-list>
