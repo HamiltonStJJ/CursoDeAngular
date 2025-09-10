@@ -1,0 +1,26 @@
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: inherit;
+}
+
+.label.small {
+  font-size: 12px;
+}
+
+.label.medium {
+  font-size: 14px;
+}
+
+.label.large {
+  font-size: 16px;
+}
+
+.label.bold {
+  font-weight: bold;
+}
+
+.required {
+  color: red;
+  margin-left: 4px;
+}

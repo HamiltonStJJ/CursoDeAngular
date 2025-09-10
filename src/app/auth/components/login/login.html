@@ -1,5 +1,4 @@
 <div class="login-container">
-
     <form>
         <div class="logo">
             <div class="col-md-6">
@@ -7,24 +6,35 @@
             </div>
         </div>
 
-        <strong>Número de identificación</strong>
-        <mat-form-field appearance="outline">
-            <mat-label>Ingrese su número de identificación</mat-label>
-            <input matInput type="text" placeholder="Número de identificación">
-        </mat-form-field>
+        <app-label 
+            text="Número de identificación" 
+            [bold]="true">
+        </app-label>
+        <app-input 
+             label="Ingrese su número de identificación"
+            placeholder="Número de identificación"
+            type="text"
+            [required]="false">
+        </app-input>
 
-        <strong>Contraseña</strong>
-        <mat-form-field appearance="outline">
-            <mat-label>Ingrese su contraseña</mat-label>
-            <input matInput type="password" placeholder="Contraseña">
-        </mat-form-field>
+        <app-label 
+            text="Contraseña" 
+            [required]="false" 
+            [bold]="true">
+        </app-label>
+        <app-input 
+            label="Ingrese su contraseña"
+            placeholder="Contraseña"
+            appearance="outline"
+            type="password"
+            [required]="false">
+        </app-input>
 
         <div class="olvidar-contrasena">
             <a href="#">¿Olvidó su contraseña?</a>
         </div>
 
-        <div class="button-container">
-            <button mat-raised-button color="primary">Iniciar sesión</button>
-        </div>
+        <app-button label="Iniciar Sesión Premium" type="filled" color="primary">
+        </app-button>
     </form>
 </div>

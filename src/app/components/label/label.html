@@ -1,0 +1,7 @@
+<label 
+  [for]="for" 
+  [class]="'label ' + size + (bold ? ' bold' : '')"
+  [style.color]="color">
+  {{ text }}
+  <span *ngIf="required" class="required">*</span>
+</label>
