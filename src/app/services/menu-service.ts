@@ -8,6 +8,7 @@ export class MenuService {
   private listMenu:MenuInterface[] = [
     {tittle:'Clientes', icon:'client', url:'clients'},
     {tittle:'Facturas', icon:'invoice', url:'invoices'},
+    {tittle:'Post', icon:'invoice', url:'posts'},
   ]
 
   getMenu(){

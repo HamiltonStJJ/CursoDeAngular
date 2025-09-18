@@ -1,0 +1,11 @@
+<app-container>
+  <h1>Lista de Posts</h1>
+  <ul>
+    @for (post of posts; track $index) {
+      <li>
+        <strong>{{post.title}}</strong>
+        {{post.body}}
+      </li>
+    }
+  </ul>
+</app-container>

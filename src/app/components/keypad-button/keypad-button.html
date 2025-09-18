@@ -1,0 +1,13 @@
+<div class="container">
+	@for (button of listButtons; track $index) {
+	  <button
+		mat-fab
+		[color]="button.color"
+		[matTooltip]="button.tooltip"
+		(click)="doAction(button.action)"
+		>
+		<mat-icon>{{button.icon}}</mat-icon>
+	  </button>
+	}
+  </div>
+  

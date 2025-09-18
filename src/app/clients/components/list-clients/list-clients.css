@@ -1,0 +1,48 @@
+app-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: space-between;
+	position: relative; /* Necesario para el posicionamiento de los botones */
+  }
+  
+  app-table {
+	flex: 1;
+  }
+  
+  app-paginator {
+	margin-top: auto;
+  }
+  
+  /* Botones flotantes en la esquina superior derecha */
+  app-keypad-button {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 1000;
+  }
+  
+  /* Estilos para los botones individuales dentro del keypad */
+  app-keypad-button ::ng-deep button {
+	background: #007bff;
+	border: none;
+	border-radius: 50px;
+	padding: 12px 20px;
+	margin: 5px;
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  }
+  
+  app-keypad-button ::ng-deep button:hover {
+	background: #0056b3;
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+  }
+  
+  app-keypad-button ::ng-deep button:active {
+	transform: translateY(0);
+	box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+  }

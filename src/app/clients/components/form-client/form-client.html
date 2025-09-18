@@ -1,0 +1,41 @@
+<mat-toolbar>
+  <h3>{{title}}</h3>
+  <button mat-icon-button mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-dialog-content>
+  <form [formGroup]="group" class="container">
+    <mat-form-field appearance="outline">
+      <mat-label>Cédula</mat-label>
+      <input matInput type="text" formControlName="dni">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Nombres</mat-label>
+      <input matInput type="text" formControlName="firstname">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Apellidos</mat-label>
+      <input matInput type="text" formControlName="lastname">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Correo Electrónico</mat-label>
+      <input matInput type="text" formControlName="email">
+    </mat-form-field>
+      <div>
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      [disabled]="group.invalid"
+      (click)="save()"
+    >Grabar</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      mat-dialog-close
+    >Cancelar</button>
+  </div>
+  </form>
+</mat-dialog-content>

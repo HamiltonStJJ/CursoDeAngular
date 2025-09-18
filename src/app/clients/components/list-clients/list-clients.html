@@ -1,1 +1,32 @@
-<p>list-clients works!</p>
+<app-container>
+  <app-table [data]="records" [metaDataColumns]="metaDataColumnsClient">
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let row" class="alignBottom">
+        <button
+          mat-icon-button
+          color="primary"
+          (click)="openForm(row)"
+          matTooltip="EDITAR">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button
+          mat-icon-button
+          color="accent"
+          (click)="delete(row.id)"
+          matTooltip="ELIMINAR">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+  </app-table>
+  <app-paginator class="paginator"
+    (onChangePage)="changePage($event)"
+    [length]="totalRecords"
+  ></app-paginator>
+</app-container>
+<app-keypad-button
+  class="position"
+  [listButtons]="keypadButtons"
+  (onClick)="doAction($event)"
+></app-keypad-button>
