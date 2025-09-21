@@ -1,0 +1,48 @@
+<app-container>
+  <h1>🐕 Galería de Razas de Perros</h1>
+  
+  @if (loading) {
+    <div class="loading">
+      <p>Cargando perritos adorables...</p>
+    </div>
+  }
+  
+  @if (error) {
+    <div class="error">
+      <p>{{ error }}</p>
+    </div>
+  }
+  
+  @if (!loading && !error && dogs.length > 0) {
+    <div class="dogs-container">
+      <div class="dogs-grid">
+        @for (dog of dogs; track dog.imageUrl + dog.breed) {
+          <div class="dog-item">
+            @if (dog.imageUrl) {
+              <div class="dog-image-container">
+                <img [src]="dog.imageUrl" [alt]="dog.fullName" class="dog-image">
+              </div>
+            }
+            @if (dog.fullName && dog.imageUrl) {
+              <div class="dog-info">
+                <h3>{{ dog.fullName }}</h3>
+                <div class="dog-details">
+                  <span class="breed-badge">{{ dog.breed }}</span>
+                  @if (dog.subBreed) {
+                    <span class="sub-breed-badge">{{ dog.subBreed }}</span>
+                  }
+                </div>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  }
+  
+  @if (!loading && !error && dogs.length === 0) {
+    <div class="no-data">
+      <p>No se encontraron perros. 🐕‍🦺</p>
+    </div>
+  }
+</app-container>

@@ -9,6 +9,7 @@ export class MenuService {
     {tittle:'Clientes', icon:'client', url:'clients'},
     {tittle:'Facturas', icon:'invoice', url:'invoices'},
     {tittle:'Post', icon:'invoice', url:'posts'},
+    {tittle:'Deber', icon:'user', url:'homework'},
   ]
 
   getMenu(){
